@@ -22,15 +22,109 @@ const images = [
   },
 ];
 
-const ulList = document.querySelector("ul.gallery");
+/** Варіант 1 */
 
-ulList.style.display = "flex";
-ulList.style.justifyContent = "center";
-ulList.style.width = "100%";
-ulList.style.paddingInlineStart = "0px";
-ulList.style.listStyleType = "none";
-ulList.style.backgroundColor = "pink";
+const galletyListEl = document.querySelector('.gallery');
+galletyListEl.classList.add('gallery-style');
+galletyListEl.insertAdjacentHTML('beforebegin', '<h1>Варіант 1</h1>');
 
-const galleryMarkup = images.map((image) => `<li class="pic"><img src="${image.url}" alt="${image.alt}" height="150px"></img></li>`).join("");
 
-ulList.insertAdjacentHTML("afterbegin", galleryMarkup);
+const makeGalleryCard = ({ url, alt }) => { 
+  return `
+  <li class="gallery-item">
+    <img class="gallery-img" src="${url}" alt="${alt}"
+  </li>
+  `;
+};
+
+const galleryImg = images.map(makeGalleryCard).join('');
+console.log(galleryImg);
+
+galletyListEl.insertAdjacentHTML('afterbegin', galleryImg);
+
+
+/** Варіант 2 */
+
+// const ulList = document.querySelector("ul.gallery");
+// ulList.classList.add('gallery-style');
+// ulList.insertAdjacentHTML('beforebegin', '<h1>Варіант 2</h1>');
+
+// const galleryMarkup = images.map((image) => `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" class="gallery-img"></img></li>`).join("");
+
+// ulList.insertAdjacentHTML("afterbegin", galleryMarkup);
+
+
+/** Чорновик спроб */
+
+// const foo = (elements) => {
+//   return elements.map((elem) => {
+//     const itemEl = document.createElement('li');
+//     itemEl.classList.add('gallery-item');
+
+//     const imageEl = document.createElement('img');
+//     imageEl.classList.add('gallery-img');
+//     imageEl.src = elem.url;
+//     imageEl.alt = elem.alt;
+
+//     itemEl.append(imageEl);
+
+//     console.log(itemEl);
+//     return itemEl;
+//   });
+// }
+
+// const bar = foo(images);
+
+// galletyListEl.insertAdjacentHTML('afterbegin', bar);
+
+// const galleryCard = images.map(image => {
+//   const itemEl = document.createElement('li');
+//   itemEl.classList.add('gallery-item');
+
+//   const imageEl = document.createElement('img');
+//   imageEl.classList.add('gallery-img');
+//   imageEl.src = image.url;
+//   imageEl.alt = image.alt;
+
+//   itemEl.append(imageEl);
+
+//   console.log(itemEl);
+//   return itemEl;
+// });
+
+// console.log(galleryCard);
+
+// const foo = galleryCard.join(' ');
+// console.log(foo);
+
+
+
+
+// const imgFunction = ({ url, alt }) => { 
+//   const itemEl = document.createElement('li');
+//   itemEl.classList.add('gallery-item');
+
+
+//   const imageEl = document.createElement('img');
+//   imageEl.classList.add('gallery-img');
+//   imageEl.src = url;
+//   imageEl.alt = alt;
+
+//   itemEl.append(imageEl);
+
+//   return itemEl;  
+// };
+
+// console.log(images);
+// console.log(imgFunction(images[1]));
+
+
+
+
+// const galleryImg = images.map(imgFunction);
+
+// console.log(galleryImg);
+
+//galletyListEl.insertAdjacentHTML('afterbegin', galleryImg);
+
+//console.log(galleryImg);
