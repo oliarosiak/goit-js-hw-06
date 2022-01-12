@@ -19,29 +19,32 @@ const ingredients = [
 
 const listOfElements = document.querySelector('#ingredients');
 
-const elementsText = ingredients.map(ingredient => {
-  const li = document.createElement('li');
-  li.textContent = ingredient;
-  li.classList.add("item");
-  return li;
+const elementsItem = ingredients.map(ingredient => {
+  const liElement = document.createElement('li');
+  liElement.classList.add("item");
+  liElement.textContent = `Ingredient name: ${ingredient}`;  
+  return liElement;
 });
 
-listOfElements.append(...elementsText);
+listOfElements.append(...elementsItem);
 
 /** Варіант 2 */
 
-// const listOfElements = document.querySelector("#ingredients");
+// const ingredientsList = document.querySelector("#ingredients");
+// ingredientsList.textContent = 'Вирішено з використанням - createDocumentFragment';
+// ingredientsList.style.fontSize = '24px';
 
 // const fragmentsOfElements = document.createDocumentFragment();
 
-// const elementsText = ingredients.forEach(ingredient => {
-//   const li = document.createElement("li");
-//   li.textContent = ingredient;
-//   li.classList.add("item");
-//   fragmentsOfElements.appendChild(li);
+// const itemRef = ingredients.forEach(ingredient => {
+//   const liTag = document.createElement("li");
+//   liTag.textContent = ingredient;
+//   liTag.classList.add("item");
+   
+//   return fragmentsOfElements.append(liTag);
 // });
 
-// listOfElements.append(fragmentsOfElements);
+// ingredientsList.append(fragmentsOfElements);
 
 
 
