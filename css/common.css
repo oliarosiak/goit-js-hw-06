@@ -23,6 +23,24 @@ button {
   cursor: pointer;
 }
 
-.pic {
-  margin-right: 10px;
+/* style for task-03 */
+
+.gallery-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rosybrown;
+  list-style: none;
+  padding: 10px;
+}
+
+.gallery-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.gallery-img {
+  display: block;
+  height: 150px;
+  max-width: 100%;
 }
