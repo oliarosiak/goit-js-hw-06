@@ -28,7 +28,6 @@ const galletyListEl = document.querySelector('.gallery');
 galletyListEl.classList.add('gallery-style');
 galletyListEl.insertAdjacentHTML('beforebegin', '<h1>Варіант 1</h1>');
 
-
 const makeGalleryCard = ({ url, alt }) => { 
   return `
   <li class="gallery-item">
@@ -98,8 +97,6 @@ galletyListEl.insertAdjacentHTML('afterbegin', galleryImg);
 // console.log(foo);
 
 
-
-
 // const imgFunction = ({ url, alt }) => { 
 //   const itemEl = document.createElement('li');
 //   itemEl.classList.add('gallery-item');
@@ -112,19 +109,9 @@ galletyListEl.insertAdjacentHTML('afterbegin', galleryImg);
 
 //   itemEl.append(imageEl);
 
-//   return itemEl;  
+//   return `${itemEl}`;  
 // };
 
-// console.log(images);
-// console.log(imgFunction(images[1]));
-
-
-
-
 // const galleryImg = images.map(imgFunction);
+// galletyListEl.insertAdjacentHTML('afterbegin', `${galleryImg.join('')}`);
 
-// console.log(galleryImg);
-
-//galletyListEl.insertAdjacentHTML('afterbegin', galleryImg);
-
-//console.log(galleryImg);
