@@ -15,14 +15,14 @@ const btnIncrement = document.querySelector('button[data-action="increment"]');
 
 let counterValue = 0;
 
-btnDecrement.addEventListener('click', () => { 
+btnDecrement.addEventListener('click', () => {
     counterValue -= 1;
     document.getElementById('value').textContent = counterValue;
-    console.log('Віднімає -1:', counterValue);      
+    console.log('Віднімає -1:', counterValue);
 });
 
 btnIncrement.addEventListener("click", () => {
     counterValue += 1;
     document.getElementById('value').textContent = counterValue;
-    console.log('Додає +1:', counterValue);        
+    console.log('Додає +1:', counterValue);
 });
