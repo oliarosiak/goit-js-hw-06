@@ -6,3 +6,14 @@
  * Для добавления стилей, используй CSS-классы valid и invalid, 
  * которые мы уже добавили в исходные файлы задания.
 */
+
+const inputEl = document.querySelector('#validation-input');
+
+const inputBorderColor = (event) => {    
+    if (event.currentTarget.value.length === Number(event.currentTarget.dataset.length)) {
+        return inputEl.setAttribute('class', 'valid');        
+    }        
+    return inputEl.setAttribute('class', 'invalid');    
+};
+
+inputEl.addEventListener('blur', inputBorderColor);
