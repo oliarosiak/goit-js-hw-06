@@ -3,17 +3,16 @@
  * В результате при перетаскивании ползунка будет меняться размер текста. 
 */
 
-const inputControl = document.querySelector('#font-size-control');
-console.log(inputControl);
+const inputControlEl = document.querySelector('#font-size-control');
+// console.dir(inputControl);
+// console.dir(inputControl.getAttribute('range'));
+// console.dir(inputControl.value);
 
 const textEl = document.querySelector('#text');
-console.log(textEl);
-
-textEl.style.fontSize = '24px';
-console.log(textEl.style);
 
 const changeTextFontSize = (event) => { 
-    
+    textEl.style.fontSize = `${event.currentTarget.value}px`;   
+    // console.log(textEl.style.fontSize);
 };
 
-//inputControl.addEventListener('input',);
+inputControlEl.addEventListener('input', changeTextFontSize);
