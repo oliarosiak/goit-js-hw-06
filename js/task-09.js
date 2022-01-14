@@ -13,9 +13,11 @@ function getRandomHexColor() {
 }
 
 const handleChangeColorBtn = () => { 
-  bodyEl.style.backgroundColor = getRandomHexColor(); 
-  const backgroundColor = `${getRandomHexColor()}`;  
-  bodyTextColor.textContent = backgroundColor;
+  bodyEl.style.backgroundColor = getRandomHexColor();
+  console.log('body color:', bodyEl.style.backgroundColor);
+ 
+  bodyTextColor.textContent = bodyEl.style.backgroundColor;
+  console.log('text content:', bodyTextColor.textContent);
 };
 
 changeColorBtn.addEventListener('click', handleChangeColorBtn);
