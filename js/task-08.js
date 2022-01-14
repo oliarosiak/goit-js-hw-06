@@ -32,29 +32,3 @@ loginFormRef.addEventListener('submit', (event) => {
     }
     event.currentTarget.reset();
 });
-
-
-
-// const formSubmitHandler = (event) => {
-//     event.preventDefault();
-//     const messageAlert = 'All fields must be filled!';    
-
-//     const {
-//         elements: { email, password }
-//     } = event.currentTarget;
-    
-//     if (email.value === "" || password.value === "") {
-//         return alert(messageAlert);
-//     }
-
-//     console.log(`Login: ${email.value}, Password: ${password.value}`);
-
-//     // let foo = {};
-//     //{ email: `${email.value}` password: `${password.value}`}
-
-
-//     event.currentTarget.reset();
-// };
-
-
-// loginFormRef.addEventListener('submit', formSubmitHandler);

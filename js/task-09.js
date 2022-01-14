@@ -19,18 +19,3 @@ const handleChangeColorBtn = () => {
 };
 
 changeColorBtn.addEventListener('click', handleChangeColorBtn);
-
-
-// const handleChangeColorBtn = () => { 
-
-//   bodyEl.style.backgroundColor = getRandomHexColor();
-//   //const backgroundColor = bodyEl.getAttribute('style');  
-//   const backgroundCol = `${getRandomHexColor()}`;  
-//   console.log(backgroundCol);
-//   //console.log(backgroundColor);
-//   // bodyTextColor.textContent = `${backgroundColor}`;
-//   bodyTextColor.textContent = backgroundCol;
-// };
-
-
-// changeColorBtn.addEventListener('click', handleChangeColorBtn);

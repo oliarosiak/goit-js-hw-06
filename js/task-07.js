@@ -4,15 +4,11 @@
 */
 
 const inputControlEl = document.querySelector('#font-size-control');
-// console.dir(inputControl);
-// console.dir(inputControl.getAttribute('range'));
-// console.dir(inputControl.value);
 
 const textEl = document.querySelector('#text');
 
 const changeTextFontSize = (event) => { 
-    textEl.style.fontSize = `${event.currentTarget.value}px`;   
-    // console.log(textEl.style.fontSize);
+    textEl.style.fontSize = `${event.currentTarget.value}px`;
 };
 
 inputControlEl.addEventListener('input', changeTextFontSize);

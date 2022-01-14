@@ -26,7 +26,7 @@ const images = [
 
 const galletyListEl = document.querySelector('.gallery');
 galletyListEl.classList.add('gallery-style');
-galletyListEl.insertAdjacentHTML('beforebegin', '<h1>Варіант 1</h1>');
+galletyListEl.insertAdjacentHTML('beforebegin', '<h1>Version 1</h1>');
 
 const makeGalleryCard = ({ url, alt }) => { 
   return `
@@ -46,72 +46,8 @@ galletyListEl.insertAdjacentHTML('afterbegin', galleryImg);
 
 // const ulList = document.querySelector("ul.gallery");
 // ulList.classList.add('gallery-style');
-// ulList.insertAdjacentHTML('beforebegin', '<h1>Варіант 2</h1>');
+// ulList.insertAdjacentHTML('beforebegin', '<h1>Version 2</h1>');
 
 // const galleryMarkup = images.map((image) => `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" class="gallery-img"></img></li>`).join("");
 
 // ulList.insertAdjacentHTML("afterbegin", galleryMarkup);
-
-
-/** Чорновик спроб */
-
-// const foo = (elements) => {
-//   return elements.map((elem) => {
-//     const itemEl = document.createElement('li');
-//     itemEl.classList.add('gallery-item');
-
-//     const imageEl = document.createElement('img');
-//     imageEl.classList.add('gallery-img');
-//     imageEl.src = elem.url;
-//     imageEl.alt = elem.alt;
-
-//     itemEl.append(imageEl);
-
-//     console.log(itemEl);
-//     return itemEl;
-//   });
-// }
-
-// const bar = foo(images);
-
-// galletyListEl.insertAdjacentHTML('afterbegin', bar);
-
-// const galleryCard = images.map(image => {
-//   const itemEl = document.createElement('li');
-//   itemEl.classList.add('gallery-item');
-
-//   const imageEl = document.createElement('img');
-//   imageEl.classList.add('gallery-img');
-//   imageEl.src = image.url;
-//   imageEl.alt = image.alt;
-
-//   itemEl.append(imageEl);
-
-//   console.log(itemEl);
-//   return itemEl;
-// });
-
-// console.log(galleryCard);
-
-// const foo = galleryCard.join(' ');
-// console.log(foo);
-
-
-// const imgFunction = ({ url, alt }) => { 
-//   const itemEl = document.createElement('li');
-//   itemEl.classList.add('gallery-item');
-
-
-//   const imageEl = document.createElement('img');
-//   imageEl.classList.add('gallery-img');
-//   imageEl.src = url;
-//   imageEl.alt = alt;
-
-//   itemEl.append(imageEl);
-
-//   return `${itemEl}`;  
-// };
-
-// const galleryImg = images.map(imgFunction);
-// galletyListEl.insertAdjacentHTML('afterbegin', `${galleryImg.join('')}`);
-
